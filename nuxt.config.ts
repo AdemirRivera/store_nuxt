@@ -2,10 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome'],
+  modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome', '@nuxtjs/google-fonts'],
   fontawesome: {
     icons: {
-      solid: ['store'],
+      solid: ['store', 'cart-shopping', 'user', 'search'],
     }
-  }
+  },
+  googleFonts: {
+    families: {
+      Poppins: [400, 500, 700], // Cambia "Roboto" por la fuente que deseas usar
+    },
+  },
 })
