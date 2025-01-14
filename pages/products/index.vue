@@ -1,11 +1,10 @@
 <template>
   <div>
-    <h1 class="text-3xl font-bold underline">Products</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perspiciatis
-      totam inventore earum ipsam ullam blanditiis, quidem assumenda vero illum
-      veniam similique ex quasi tenetur magni. At id tenetur nesciunt.
-    </p>
+    <div class="grid grid-cols-4 gap-5">
+      <div v-for="p in products" :key="p.id">
+{{ p }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -13,4 +12,6 @@
 definePageMeta({
   layout: 'products'
 })
+
+const { data: products } = await useFetch('https://fakestoreapi.com/products')
 </script>

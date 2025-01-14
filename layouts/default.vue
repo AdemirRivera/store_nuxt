@@ -15,6 +15,7 @@
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
+          @click="show_menu = !show_menu"
         >
           <span class="sr-only">Open main menu</span>
           <svg
@@ -33,33 +34,22 @@
             />
           </svg>
         </button>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <div
+          class="w-full md:block md:w-auto"
+          id="navbar-default"
+          v-show="show_menu"
+        >
           <ul
             class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
           >
             <li>
-              <NuxtLink
-                to="/"
-                class="custom-link"
-              >
-                Home
-              </NuxtLink>
+              <NuxtLink to="/" class="custom-link"> Home </NuxtLink>
             </li>
             <li>
-              <NuxtLink
-                to="/about"
-                class="custom-link"
-              >
-                About
-              </NuxtLink>
+              <NuxtLink to="/about" class="custom-link"> About </NuxtLink>
             </li>
             <li>
-              <NuxtLink
-                to="/products"
-                class="custom-link"
-              >
-                Products
-              </NuxtLink>
+              <NuxtLink to="/products" class="custom-link"> Products </NuxtLink>
             </li>
           </ul>
         </div>
@@ -67,9 +57,34 @@
     </nav>
 
     <div>
-        <slot />
+      <slot />
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
+
+const show_menu = ref(false);
+let mediaQuery;
+
+// Actualiza el booleano según el estado del matchMedia
+const updateMediaQuery = () => {
+  show_menu.value = mediaQuery.matches;
+};
+
+onMounted(() => {
+  // Configura el media query
+  mediaQuery = window.matchMedia('(min-width: 728px)');
+
+  // Llama a la función inicialmente
+  updateMediaQuery();
+
+  // Escucha cambios
+  mediaQuery.addEventListener('change', updateMediaQuery);
+});
+
+onUnmounted(() => {
+  mediaQuery.removeEventListener('change', updateMediaQuery);
+});
+</script>

@@ -1,12 +1,18 @@
-import { NuxtLink } from '../.nuxt/components';
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline">Home</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa perspiciatis
-      totam inventore earum ipsam ullam blanditiis, quidem assumenda vero illum
-      veniam similique ex quasi tenetur magni. At id tenetur nesciunt.
-    </p>
+  <div class="min-h-full">
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">
+          Dashboard
+        </h1>
+      </div>
+    </header>
+    <main>
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <!-- Your content -->
+         asdhfksjdhf
+      </div>
+    </main>
   </div>
 </template>
 
