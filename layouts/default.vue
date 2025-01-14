@@ -1,13 +1,13 @@
 <template>
   <div class="min-h-full">
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <nav class="bg-white">
       <div
         class="flex flex-wrap items-center justify-between p-4 md:mx-8 mx-2"
       >
         <span
-          class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+          class="self-center text-2xl font-semibold whitespace-nowrap"
         >
-          Store
+        <font-awesome icon="store" /> Store
         </span>
         <button
           data-collapse-toggle="navbar-default"
