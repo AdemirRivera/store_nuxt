@@ -1,12 +1,11 @@
 <template>
   <div class="min-h-full">
-    <nav class="flex justify-between items-center px-8 py-3">
-      <div class="text-2xl">
+    <nav class="grid grid-cols-5 gap-2 py-3 px-12">
+      <div class="text-2xl flex items-center">
         <FontAwesome icon="store" />
-        <span v-text="'Store'" class="ml-2 font-medium" />
       </div>
 
-      <div>
+      <div class="col-span-2 flex items-center justify-center">
         <ul class="flex">
           <li class="px-2">
             <NuxtLink to="/" class=""> Home </NuxtLink>
@@ -20,7 +19,7 @@
         </ul>
       </div>
 
-      <div>
+      <div class="flex items-center justify-center">
         <div class="relative">
           <div
             class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
@@ -30,27 +29,29 @@
           <input
             type="search"
             id="default-search"
-            class="block w-full px-4 py-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+            class="block w-full px-4 py-2 ps-10 text-sm text-black border border-gray-300 rounded-lg bg-gray-200 focus:ring-blue-300 focus:border-blue-300"
             placeholder="Search product"
             required
           />
         </div>
       </div>
 
-      <div class="">
-        <FontAwesome icon="user" />
-        <span v-text="'account'" class="ml-1" />
-      </div>
+      <div class="flex items-center justify-around">
+        <div class="">
+          <FontAwesome icon="user" />
+          <span v-text="'account'" class="ml-1" />
+        </div>
 
-      <div class="">
-        <FontAwesome icon="cart-shopping" />
-        <span v-text="'cart'" class="ml-1" />
+        <div class="">
+          <FontAwesome icon="cart-shopping" />
+          <span v-text="'cart'" class="ml-1" />
+        </div>
       </div>
     </nav>
 
-    <!-- <div>
+    <div>
       <slot />
-    </div> -->
+    </div>
   </div>
 </template>
 
