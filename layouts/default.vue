@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-full">
-    <nav class="grid grid-cols-5 gap-2 py-3 px-12">
+  <div class="min-h-screen">
+    <nav class="grid grid-cols-5 gap-2 py-3 px-12 h-16">
 
       <!-- logo -->
       <div class="text-2xl flex items-center">
@@ -88,4 +88,5 @@
 </template>
 
 <script setup>
+const { data: categories } = await useFetch('https://fakestoreapi.com/products/categories')
 </script>
