@@ -1,14 +1,44 @@
 <template>
   <div class="min-h-full">
     <nav class="grid grid-cols-5 gap-2 py-3 px-12">
+
+      <!-- logo -->
       <div class="text-2xl flex items-center">
         <FontAwesome icon="store" />
       </div>
 
+      <!-- normal menu -->
       <div class="col-span-2 flex items-center justify-center">
         <ul class="flex">
           <li class="px-2">
             <NuxtLink to="/" class=""> Home </NuxtLink>
+          </li>
+          <li>
+            <button
+              id="dropdownNavbarLink"
+              data-dropdown-toggle="dropdownNavbar"
+              class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto mx-3"
+            >
+              Categorías
+              <FontAwesome icon="angle-down" class="ml-1" />
+            </button>
+            <!-- Dropdown menu -->
+            <div
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Dashboard
+                  </a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="px-2">
             <NuxtLink to="/about" class=""> About </NuxtLink>
@@ -19,6 +49,7 @@
         </ul>
       </div>
 
+      <!-- search -->
       <div class="flex items-center justify-center">
         <div class="relative">
           <div
@@ -36,6 +67,7 @@
         </div>
       </div>
 
+      <!-- account and cart -->
       <div class="flex items-center justify-around">
         <div class="">
           <FontAwesome icon="user" />
@@ -56,28 +88,4 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const show_menu = ref(false)
-let mediaQuery
-
-// Actualiza el booleano según el estado del matchMedia
-const updateMediaQuery = () => {
-  show_menu.value = mediaQuery.matches
-}
-
-onMounted(() => {
-  // Configura el media query
-  mediaQuery = window.matchMedia('(min-width: 728px)')
-
-  // Llama a la función inicialmente
-  updateMediaQuery()
-
-  // Escucha cambios
-  mediaQuery.addEventListener('change', updateMediaQuery)
-})
-
-onUnmounted(() => {
-  mediaQuery.removeEventListener('change', updateMediaQuery)
-})
 </script>

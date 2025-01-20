@@ -1,17 +1,35 @@
 <template>
   <div>
-    <header class="bg-white shadow">
-      <div class="max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900">
-          Dashboard
+    <section class="bg-white dark:bg-gray-900">
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <h1
+          class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"
+        >
+          Hasta 50% de descuento en articulos seleccionados
         </h1>
+        <p
+          class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400"
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos velit
+          vitae mollitia deserunt odit quae inventore sequi fuga illum id
+          obcaecati sunt unde alias harum animi aut, ullam repellat quo.
+        </p>
+        <div
+          class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0"
+        >
+          <button
+            type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+          >
+          <span class="mr-1">
+
+            Comprar
+          </span>
+            <FontAwesome icon="arrow-right" />
+          </button>
+        </div>
       </div>
-    </header>
-    <main>
-      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <!-- Your content -->
-      </div>
-    </main>
+    </section>
   </div>
 </template>
 
