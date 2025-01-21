@@ -13,4 +13,15 @@ export default defineNuxtConfig({
       Poppins: [400, 500, 700], // Cambia "Roboto" por la fuente que deseas usar
     },
   },
+  app: {
+    head: {
+      title: 'Nuxt store',
+      meta: [
+        {
+          name: 'description',
+          content: 'Nuxt store'
+        }
+      ]
+    }
+  }
 })
