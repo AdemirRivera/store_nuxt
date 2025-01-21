@@ -7,7 +7,10 @@
     </header>
     <main>
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <!-- Your content -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, nesciunt
+        quidem, doloremque ipsum quibusdam id incidunt amet maxime impedit,
+        voluptas eligendi rerum enim expedita. Distinctio quae consequatur error
+        labore ex.
       </div>
     </main>
   </div>
