@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@vesp/nuxt-fontawesome', '@nuxtjs/google-fonts'],
   fontawesome: {
     icons: {
-      solid: ['store', 'cart-shopping', 'user', 'search', 'arrow-right', 'angle-down'],
+      solid: ['store', 'cart-shopping', 'user', 'search', 'arrow-right', 'arrow-left', 'angle-down'],
     }
   },
   googleFonts: {
